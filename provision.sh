@@ -5,6 +5,8 @@ sudo apt-get update -y
 
 # install python and pip3
 # install git
+sudo apt install python3.6 -y
+sudo apt install python3-pip -y
 sudo apt-get install git -y
 
 sudo mkdir /home/ubuntu/Downloads

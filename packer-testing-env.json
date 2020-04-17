@@ -26,26 +26,14 @@
     },
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
-    "ami_name": "eng54-maksaud-node-app-{{timestamp}}"
+    "ami_name": "eng54-maksaud-it_jobswatch-test-{{timestamp}}"
   }],
 
   "provisioners": [
     {
-      "type": "file",
-      "source": "app",
-      "destination":"/home/ubuntu/starter-code"
-    },
-    {
-      "type": "shell",
-      "inline": ["sudo apt install python3.6", "sudo apt install python3-pip -y"]
-    },
-    {
-      "type": "shell",
-      "script": "provision.sh"
-    },
-    {
-      "type":"shell",
-      "inline":["cd /home/ubuntu/starter-code", "sudo pip3 test pytest"]
+      "type": "chef-solo",
+      "cookbook_paths": ["./berks-cookbooks"],
+      "run_list":["it_jobs::default"]
     }
   ]
 }
