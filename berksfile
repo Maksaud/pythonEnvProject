@@ -1,4 +1,4 @@
 source "https://supermarket.chef.io"
 
 
-cookbook 'it_jobs', git: 'git@github.com:Maksaud/it_jobs.git'
+cookbook 'it_jobs', git: 'https://github.com/Maksaud/it_jobs.git'
