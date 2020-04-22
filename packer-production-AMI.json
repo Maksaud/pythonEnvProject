@@ -10,7 +10,7 @@
     "subnet_id":"subnet-0e9b6138ff1ce18f2",
     "region":"eu-west-1",
     "ssh_keypair_name": "maksaud-eng54",
-    "ssh_private_key_file": "PEM_KEY",
+    "ssh_agent_auth": "true",
     "associate_public_ip_address": true,
 
     "access_key": "{{user `aws_access_key`}}",
