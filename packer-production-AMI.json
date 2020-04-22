@@ -30,14 +30,13 @@
   "provisioners": [
     {
       "type": "chef-solo",
-      "cookbook_paths": ["./berks-cookbooks"],
-      "run_list":["it_jobs::default"],
-      "execute_command": "{{if .Sudo}}sudo {{end}}chef-solo --chef-license accept-silent -c {{.ConfigPath}} -j /tmp/node.json"
+      "cookbook_paths": [".Cookbooks"],
+      "run_list":["it_jobs::default"]
     },
     {
       "type": "file",
       "source": "app",
-      "destination": "/home/ubuntu/app"
+      "destination": "/home/ubuntu"
     },
     {
       "type": "shell",
