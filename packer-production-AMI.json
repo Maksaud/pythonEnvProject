@@ -38,7 +38,7 @@
     {
       "type": "file",
       "source": "app",
-      "destination": "/home/ubuntu/"
+      "destination": "/home/ubuntu/app"
     },
     {
       "type": "shell",
