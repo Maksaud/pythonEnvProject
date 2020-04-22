@@ -26,7 +26,7 @@
     },
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
-    "ami_name": "eng54-maksaud-it_jobswatch-app-{{timestamp}}"
+    "ami_name": "eng54-maksaud-it_jobswatch-test-{{timestamp}}"
   }],
 
   "provisioners": [
@@ -37,12 +37,12 @@
     },
     {
       "type": "file",
-      "source": "app/",
-      "destination": "/home/ubuntu/starter-code"
+      "source": "app",
+      "destination": "/home/ubuntu/"
     },
     {
       "type": "shell",
-      "execute": ["echo 'it is done'"]
+      "inline": ["echo 'it is done'"]
     }
   ]
 }
