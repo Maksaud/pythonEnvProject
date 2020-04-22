@@ -31,7 +31,8 @@
     {
       "type": "chef-solo",
       "cookbook_paths": ["./berks-cookbooks"],
-      "run_list":["it_jobs::default"]
+      "run_list":["it_jobs::default"],
+      "execute_command": "{{if .Sudo}}sudo {{end}}chef-solo --chef-license accept-silent -c {{.ConfigPath}} -j /tmp/node.json"
     },
     {
       "type": "file",
